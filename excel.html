@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel to Chart Converter</title>
+    <link rel="stylesheet" href="excel.css">
+    <!-- 2 cai dong duoi nay la JS libary de lam cac chart, RAT quan trong!!!, dong thu 2 de read va process excel file mik upload -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script> <!-- khong co cai nay thi readExcelHeaders va processExcel trong js k dung dc  -->
+</head>
+<body>
+    <div class="container">
+        <h1>Excel to Chart Converter</h1>
+        <div class="control-panel">
+            <div class="file-input">
+                <label for="excelFile" class="file-label">Choose Excel File</label>
+                <input type="file" id="excelFile" accept=".xlsx, .xls" onchange="readExcelHeaders()">
+            </div>
+            <div class="chart-params">
+                <select id="xAxis" disabled><option>Select X-Axis</option></select>
+                <select id="yAxis" disabled><option>Select Y-Axis</option></select>
+                <input type="number" id="rowLimit" placeholder="Row Limit">
+            </div>
+            <button onclick="processExcel()" id="generateBtn" disabled>Generate Charts</button>
+        </div>
+        <div class="chart-container">
+            <div class="chart-wrapper">
+                <canvas id="lineChart"></canvas>
+            </div>
+            <div class="chart-wrapper">
+                <canvas id="pieChart"></canvas>
+            </div>
+            <div class="chart-wrapper">
+                <canvas id="barChart"></canvas>
+            </div>
+        </div>
+    </div>
+    <script src="excel.js"></script>
+</body>
+</html>

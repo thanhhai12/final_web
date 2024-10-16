@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content List</title>
+    <link rel="stylesheet" href="post.css">
+</head>
+
+<body>
+    <!-- Thanh search -->
+    <div class="search-container">
+        <input type="text" id="search-bar" placeholder="Search content..." onkeyup="searchContent()">
+    </div>
+
+    <!-- Danh sách content -->
+    <div id="contentList" class="content-list">
+        <!-- Nội dung sẽ hiển thị tại đây -->
+    </div>
+    <!-- Overlay -->
+         
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Popup cho việc chỉnh sửa content -->
+     
+    <div class="popup" id="popup">
+        <div class="popup-header">
+            Edit Content
+        </div>
+        <div class="popup-body">
+            <input type="text" id="title" value="" placeholder="Title...">
+            <textarea id="content"placeholder="Edit Content"></textarea>
+            <button class="cancel-btn" onclick="closePopup()">Cancel</button>
+            <button class="save-btn">Save</button>
+        </div>
+    </div>
+    <script src="post.js"></script>
+</body>
+
+</html>
