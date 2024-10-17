@@ -1,4 +1,6 @@
 
+
+
 // Function to navigate to the Add Content page
 function goToCMS() {
     window.location.href = 'add.html'; // Navigate to Add Content page
@@ -24,6 +26,18 @@ function goToHome() {
     window.location.href = 'index.html'; // Navigate to Add Content page
 }
 
+function toggleNav() {
+    var nav = document.getElementById("side-nav");
+    if (nav.style.width === "250px") {
+        nav.style.width = "0";
+    } else {
+        nav.style.width = "250px";
+    }
+}
+
+function closeNav() {
+    document.getElementById("side-nav").style.width = "0";
+}
 
 
 
@@ -225,6 +239,54 @@ function updateFooterButtons() {
         nextBtn.style.display = 'none';
         prevBtn.onclick = goToPreviousContainer3;
     }
+}
+
+function goToCMS() {
+    const userRole = localStorage.getItem('userRole');
+    if (userRole === 'admin') {
+        window.location.href = 'add.html';
+    } else {
+        alert('Access restricted for normal users.');
+    }
+}
+
+function goToMedia() {
+    const userRole = localStorage.getItem('userRole');
+    if (userRole === 'admin') {
+        window.location.href = 'media.html';
+    } else {
+        alert('Access restricted for normal users.');
+    }
+}
+
+function goToDocument() {
+    const userRole = localStorage.getItem('userRole');
+    if (userRole === 'admin') {
+        window.location.href = 'document.html'; 
+    } else {
+        alert('Access restricted for normal users.');
+    }
+}
+
+function goToShared() {
+    const userRole = localStorage.getItem('userRole');
+    if (userRole === 'admin', 'normal') {
+        window.location.href = 'shared.html'; 
+    } else {
+        alert('Access restricted for normal users.');
+    }
+}
+
+function goToProfile() {
+    window.location.href = 'profile.html'; 
+}
+
+function goToSupport() {
+    window.location.href = 'contact.html';
+}
+
+function goToHome() {
+    window.location.href = 'index.html';
 }
 
 // Call updateFooterButtons on page load to ensure buttons are correct

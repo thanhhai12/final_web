@@ -7,7 +7,9 @@ function goToProfile() {
     window.location.href = 'profile.html'; // Redirects to profile.html
 }
 
-
+function goToVisualize() {
+    window.location.href = 'excel.html'; 
+}
 // Function to navigate to Settings page
 function goToSettings() {
     alert('Settings page not implemented yet.');

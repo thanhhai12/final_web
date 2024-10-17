@@ -131,9 +131,9 @@ body.fixed-position {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #ffffff; 
+    background-color: #f0f0f0; 
     padding: 0px;
-    border-radius: 5px;
+    border-radius: 10px;
     z-index: 1000;
     width: 900px; /* Chiều rộng cố định */
     box-shadow: 6px 6px 16px rgba(0, 0, 0, 0.3); 
@@ -146,9 +146,14 @@ body.fixed-position {
     padding: 15px; /* Thêm khoảng cách cho tiêu đề */
     border-bottom: 1px solid #ddd; /* Đường viền dưới cho header */
     border-radius: 5px;
-    font-size: 20px;
+    height: 50px;    
     font-weight: bold;
     text-align: left; /* Căn trái cho tiêu đề */
+}
+
+.popup-header-text{
+    margin-left: 15px;
+    font-size: 25px;
 }
 .popup-body {
     padding: 20px;
@@ -170,20 +175,33 @@ body.fixed-position {
 }
 
 /* Nút Save và Cancel */
-.save-btn, .cancel-btn {
-    background-color: #4CAF50; /* Màu xanh cho nút Save */
+.cancel-btn {
+    background-color: #000000; /* Màu xanh cho nút Save */
     color: white;
     padding: 10px 20px; /* Padding lớn hơn cho nút */
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px; /* Tăng kích thước chữ */
-    margin-right: 10px;
+    float: left;
     transition: background-color 0.3s ease; /* Hiệu ứng mượt mà khi hover */
 }
 
+.save-btn{
+    background-color: #000000; /* Màu xanh cho nút Save */
+    color: white;
+    padding: 10px 20px; /* Padding lớn hơn cho nút */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px; /* Tăng kích thước chữ */
+    margin-left: 693px;
+    transition: background-color 0.3s ease; /* Hiệu ứng mượt mà khi hover */
+    
+}
+
 .cancel-btn {
-    background-color: #f44336; /* Màu đỏ cho nút Cancel */
+    background-color: #000000; /* Màu đỏ cho nút Cancel */
 }
 
 .save-btn:hover, .cancel-btn:hover {

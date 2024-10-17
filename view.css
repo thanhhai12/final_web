@@ -6,13 +6,16 @@ body {
     padding: 0;
 }
 
-/* Header style */
-.main-header {
+header {
+    background-color: #2e502c;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: px;
     background-color:#808481; 
     padding: 20px;
     text-align: left;
 }
-
 .main-header h1 {
     font-size: 28px;
     font-weight: bold;
@@ -53,6 +56,21 @@ body {
     border-radius: 5px;
     cursor: pointer;
     margin-left: 20px;
+}
+
+.vs-btn {
+    background-color: rgb(90, 90, 90);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 20px;
+    float:right;
+}
+.vs-btn:hover {
+    background-color: #303030;
+    color:white;
 }
 
 .back-btn:hover {
